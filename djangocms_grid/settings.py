@@ -5,5 +5,5 @@ TOTAL_COLUMNS_CHOICES = [
     (i, i) for i in range(0, TOTAL_COLUMNS + 1)
 ]
 COLUMN_CHOICES = [
-    (i, 'grid-{}'.format(i)) for i in range(1, TOTAL_COLUMNS + 1)
+    (str(i), 'grid-{}'.format(i)) for i in range(1, TOTAL_COLUMNS + 1)
 ]
