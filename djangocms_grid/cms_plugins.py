@@ -6,7 +6,7 @@ from cms.models import CMSPlugin
 
 from .forms import GridPluginForm
 from .models import Grid, GridColumn
-from .settings import TOTAL_COLUMNS_CHOICES
+from .settings import TOTAL_COLUMNS_CHOICES, GRID_COLUMN_PLUGINS
 
 
 class GridPlugin(CMSPluginBase):
@@ -46,6 +46,7 @@ class GridColumnPlugin(CMSPluginBase):
     module = _('Multi Columns')
     render_template = 'djangocms_grid/column.html'
     allow_children = True
+    child_classes = GRID_COLUMN_PLUGINS
 
     def render(self, context, instance, placeholder):
         context.update({

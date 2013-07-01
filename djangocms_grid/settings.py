@@ -7,3 +7,5 @@ TOTAL_COLUMNS_CHOICES = [
 COLUMN_CHOICES = [
     (str(i), 'grid-{}'.format(i)) for i in range(1, TOTAL_COLUMNS + 1)
 ]
+
+GRID_COLUMN_PLUGINS = getattr(settings, 'GRID_COLUMN_PLUGINS', None)
